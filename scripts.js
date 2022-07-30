@@ -1,14 +1,14 @@
 "use strict";
 
 let num = 266219;
-let sum = 0;
+let sum = 1;
 
 for (let i = 0; i <= 5; i++) {
   let str = String(num);
-  sum = +str[i] * +str[i];
+  sum *= +str[i];
 }
 
-let result = 3;
-result **= sum;
+sum **= 3;
 
-console.log(result.toPrecision(2));
+console.log(sum.toPrecision(2))
+
