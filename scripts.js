@@ -10,5 +10,5 @@ for (let i = 0; i <= 5; i++) {
 
 sum **= 3;
 
-console.log(sum.toPrecision(2))
+console.log(String(sum).slice(0, 2));
 
