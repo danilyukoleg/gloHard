@@ -1,14 +1,44 @@
 "use strict";
+let lang = "en";
+let arrRU = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+let arrEN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+let arrBig = [
+  ["пн", "вт", "ср", "чт", "пт", "сб", "вс"],
+  ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+];
 
-let num = 266219;
-let sum = 0;
+console.log(arrBig[1]);
 
-for (let i = 0; i <= 5; i++) {
-  let str = String(num);
-  sum = +str[i] * +str[i];
+if (lang === "ru") {
+  console.log(arrRU);
+} else if (lang === "en") {
+  console.log(arrEN);
+} else {
+  console.log("УПС");
 }
 
-let result = 3;
-result **= sum;
+switch (lang) {
+  case "ru":
+    console.log(arrRU);
+    break;
+  case "en":
+    console.log(arrEN);
+    break;
+  default:
+    console.log("УПС");
+}
 
-console.log(result.toPrecision(2));
+let namePerson = "Олег";
+
+if (namePerson === "Артем") {
+  console.log("директор");
+} else if (namePerson === "Александр") {
+  console.log("преподаватель");
+} else {
+  console.log("студент");
+}
+
+namePerson == "Артем" ? console.log("директор") : console.log("студент");
+namePerson == "Александр"
+  ? console.log("преподователь")
+  : console.log("студент");
