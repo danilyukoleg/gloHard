@@ -28,17 +28,9 @@ switch (lang) {
     console.log("УПС");
 }
 
-let namePerson = "Олег";
+let namePerson = "Артем";
 
-if (namePerson === "Артем") {
-  console.log("директор");
-} else if (namePerson === "Александр") {
-  console.log("преподаватель");
-} else {
-  console.log("студент");
-}
-
-namePerson == "Артем" ? console.log("директор") : console.log("студент");
-namePerson == "Александр"
+namePerson === "Артем" ? console.log("директор") : console.log("студент");
+namePerson === "Александр"
   ? console.log("преподователь")
   : console.log("студент");
