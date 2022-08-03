@@ -1,36 +1,17 @@
 "use strict";
-let lang = "en";
-let arrRU = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-let arrEN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-let arrBig = [
-  ["пн", "вт", "ср", "чт", "пт", "сб", "вс"],
-  ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-];
 
-console.log(arrBig[1]);
+const strOperation = (str) => {
+  if (typeof str !== "string") {
+    alert("Передана не строка");
+    return;
+  }
 
-if (lang === "ru") {
-  console.log(arrRU);
-} else if (lang === "en") {
-  console.log(arrEN);
-} else {
-  console.log("УПС");
-}
+  str.replace(/ /g, "").search(0, 30);
+  if (str.length > 30) {
+    str += "...";
+  }
 
-switch (lang) {
-  case "ru":
-    console.log(arrRU);
-    break;
-  case "en":
-    console.log(arrEN);
-    break;
-  default:
-    console.log("УПС");
-}
+  return str;
+};
 
-let namePerson = "Артем";
-
-namePerson === "Артем" ? console.log("директор") : console.log("студент");
-namePerson === "Александр"
-  ? console.log("преподователь")
-  : console.log("студент");
+console.log(strOperation("123456789123456789123456789123456789"));
