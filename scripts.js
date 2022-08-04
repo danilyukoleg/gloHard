@@ -6,12 +6,11 @@ const strOperation = (str) => {
     return;
   }
 
-  str.replace(/ /g, "").search(0, 30);
   if (str.length > 30) {
     str += "...";
   }
 
-  return str;
+  return str.trim();
 };
 
 console.log(strOperation("123456789123456789123456789123456789"));
